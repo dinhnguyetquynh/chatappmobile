@@ -1,13 +1,15 @@
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React, {useState} from 'react';
 import {View, TextInput, Button} from 'react-native';
 
-const Login = () => {
+const Login: React.FC<NativeStackScreenProps<any>> = ({navigation}) => {
   const [mail, setMail] = useState('');
   const [pass, setPass] = useState('');
 
   const handleClick = () => {
     console.log({mail});
     console.log({pass});
+    navigation.navigate('Home');
   };
   return (
     <View>
